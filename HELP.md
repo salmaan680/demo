@@ -1,3 +1,8 @@
+# Read Me First
+The following was discovered as part of building this project:
+
+* The original package name 'Salmaan Duraan.demo' is invalid and this project uses 'Salmaan.Duraan.demo' instead.
+
 # Getting Started
 
 ### Reference Documentation
