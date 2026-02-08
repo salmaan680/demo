@@ -1,0 +1,21 @@
+const express = require('express');
+const router = express.Router();
+const {
+    getVehicles,
+    getVehicleById,
+    createVehicle,
+    updateVehicle,
+    deleteVehicle
+} = require('../controllers/vehicleController');
+const { protect, admin } = require('../middleware/authMiddleware');
+
+router.route('/')
+    .get(protect, getVehicles)
+    .post(protect, createVehicle);
+
+router.route('/:id')
+    .get(protect, getVehicleById)
+    .put(protect, updateVehicle)
+    .delete(protect, admin, deleteVehicle);
+
+module.exports = router;
